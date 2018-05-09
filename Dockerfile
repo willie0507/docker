@@ -12,5 +12,6 @@ RUN apt-get purge wget bzip2 -y
 RUN rm Miniconda3-latest-Linux-x86_64.sh
 RUN conda update conda -y
 RUN conda update conda -y
+RUN pip install cython numpy scipy matplotlib scikit-image tensorflow-gpu keras
 
 CMD ["bash"] 
