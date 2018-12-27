@@ -15,7 +15,7 @@ RUN rm ltp_data_v3.4.0.zip
 RUN rm Miniconda3-latest-Linux-x86_64.sh
 RUN conda update conda -y
 RUN conda install python==3.6.6
-RUN pip install cython numpy scipy matplotlib scikit-image pandas sklearn tensorflow-gpu tqdm pyltp thefuck
+RUN pip install cython numpy scipy matplotlib scikit-image pandas sklearn tensorflow-gpu tqdm pyltp thefuck torch torchvision
 
 RUN git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 RUN cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
