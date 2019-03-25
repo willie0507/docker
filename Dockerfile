@@ -20,8 +20,8 @@ RUN chsh -s /bin/zsh
 RUN find ~/.zshrc | xargs -i sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="dieter"/g' {}
 RUN echo "eval \$(thefuck --alias)" >> ~/.zshrc
 RUN echo "eval \$(thefuck --alias FUCK)" >> ~/.zshrc
-RUN git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
-RUN sed -i "66a \ \ zsh-autosuggestions" ~/.zshrc
+# RUN git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+# RUN sed -i "66a \ \ zsh-autosuggestions" ~/.zshrc
 RUN sed -i "72a export TERM=\"xterm-256color\"" ~/.zshrc
 RUN git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
 RUN echo "source /zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ~/.zshrc
