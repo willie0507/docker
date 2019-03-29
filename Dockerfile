@@ -1,4 +1,4 @@
-FROM nvidia/cuda:9.0-cudnn7-runtime
+FROM nvidia/cuda:10.0-cudnn7-runtime-ubuntu16.04
 
 RUN apt-get update
 RUN apt-get upgrade -y
@@ -12,7 +12,8 @@ ENV PATH /usr/miniconda3/bin:$PATH
 RUN rm Miniconda3-latest-Linux-x86_64.sh
 RUN conda update conda -y
 RUN conda install python==3.6.6
-RUN pip install cython numpy scipy matplotlib scikit-image pandas sklearn tensorflow-gpu tqdm pyltp thefuck torch torchvision
+RUN pip install https://download.pytorch.org/whl/cu100/torch-1.0.1.post2-cp36-cp36m-linux_x86_64.whl
+RUN pip install cython numpy scipy matplotlib scikit-image pandas sklearn tensorflow-gpu tqdm pyltp thefuck torchvision
 
 RUN git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 RUN cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
