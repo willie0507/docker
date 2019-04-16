@@ -12,7 +12,7 @@ ENV PATH /usr/miniconda3/bin:$PATH
 RUN rm Miniconda3-latest-Linux-x86_64.sh
 RUN conda update conda -y
 RUN conda install python==3.6.6
-RUN pip install cython numpy scipy matplotlib scikit-image pandas sklearn tensorflow-gpu tqdm pyltp thefuck torch torchvision
+RUN pip install cython numpy scipy matplotlib scikit-image pandas sklearn tensorflow-gpu==1.12 tqdm pyltp thefuck torch torchvision
 
 RUN git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 RUN cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
